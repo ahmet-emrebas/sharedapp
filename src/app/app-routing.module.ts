@@ -1,9 +1,10 @@
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { routes } from '@src/app/app.routes';
+import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
+import { RouterModule } from "@angular/router";
+import { routes } from "@src/app/app.routes";
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  schemas: [NO_ERRORS_SCHEMA],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

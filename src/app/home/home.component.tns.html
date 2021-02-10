@@ -1,5 +1,13 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <ActionBar [title]="title"></ActionBar>
-<StackLayout  class="p-20">
-    <Label [text]="'Welcome to ' + title + '!'" class="h1 text-center" textWrap="true"></Label>
+<StackLayout class="p-20">
+  <TextField hint="Username" keyboardType="email" [(ngModel)]="username" ></TextField>
+  <TextField hint="Password" secure="true"  [(ngModel)]="password"></TextField>
+
+  <button text="Login" (tap)="alertUser()"></button>
+  <label
+    [text]="'Welcome to ' + title + '!'"
+    class="h1 text-center"
+    textWrap="true"
+  ></label>
 </StackLayout>
