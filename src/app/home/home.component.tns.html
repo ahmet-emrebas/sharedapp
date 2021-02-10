@@ -4,7 +4,7 @@
   <TextField hint="Username" keyboardType="email" [(ngModel)]="username" ></TextField>
   <TextField hint="Password" secure="true"  [(ngModel)]="password"></TextField>
 
-  <button text="Login" (tap)="alertUser()"></button>
+  <Button text="Login" (tap)="alertUser()"></Button>
   <label
     [text]="'Welcome to ' + title + '!'"
     class="h1 text-center"

@@ -1,27 +1,41 @@
-# SharedApp
+# Nativescript Installation  For Windows
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.0.
+1. Run cmd as administrator 
+2. Run this command and say Yes for all questions.
+    
+```  
+@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://www.nativescript.org/setup/win'))"
+```
 
-## Development server
+3- After installation is done, go to Environment Variables and set the variables as follows.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Local user variables
+```
+ANDROID_HOME =  C:\Users\<username>\AppData\Local\Android\Sdk
+ANDROID_SDK_ROOT = C:\Users\<username>\AppData\Local\Android\Sdk
+```
+Then set the paths as follows.
 
-## Code scaffolding
+```
+%ANDROID_HOME%\tools
+%ANDROID_HOME%\platform-tools
+%ANDROID_HOME%\emulator
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Finally, DELETE all android related paths and UPDATE the ANDROID_HOME from  System Variables  
 
-## Build
+```
+.../tools
+.../platform-tools
+.../tools-bin
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+ANDROID_HOME = C:\Users\<username>\AppData\Local\Android\Sdk
+```
 
-## Running unit tests
+DONE!
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
